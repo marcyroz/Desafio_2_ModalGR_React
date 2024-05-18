@@ -10,39 +10,36 @@ export const Container = styled.div`
   background-color: #b3cde4;
   font-family: "Plus Jakarta Sans";
 
-  h1{
+  h1 {
     color: #00172b;
     font-size: 28px;
   }
 
-  span{
+  span {
     color: #00172b;
     font-size: 20px;
-
   }
+
 `;
 
 export const Form = styled.form`
-display: flex;
-margin-top: 30px;
+  display: flex;
+  margin-top: 30px;
 
-input{
+  input {
     flex: 1;
     padding: 10px;
     border-radius: 4px;
     font-size: 16px;
     border: 1px solid #eee;
-}
+  }
 
-
-button {
+  button {
     font-size: 16px;
     color: #eee;
     cursor: pointer;
     background-color: #f58220;
     border-radius: 4px;
     border-style: none;
-}
-
-
+  }
 `;
