@@ -1,34 +1,34 @@
-import React from "react";
 import { useState } from "react";
 import { Container, Form } from "./style";
 import logo from "../assets/images/logo-azul-branco-modalgr.svg";
 
 function App() {
+  //criando o estado para salvar o que for informado no input
   const [data, setData] = useState("");
+  //separando o estado em dois arrays distintos
   const [formattedData, setFormattedData] = useState({
     numbers: [],
     strings: [],
   });
 
   const formatData = (data) => {
-    // Dividir a string em partes usando a vírgula como delimitador
+    // dividindo a array de acordo com a vírgula, além de mapear cada item e remover os espaços indesejados com trim e garantindo qu não existam elementos vazios com filter
     const dataParts = data
       .split(",")
       .map((part) => part.trim())
       .filter((part) => part !== "");
 
-    // Inicializar arrays para números e strings
-    const numbers = [];
-    const strings = [];
+    //criando as arrays que irão armazenar os numeros e palavras a partir da desetrturação do estado "forattedData"
+    const { numbers, strings } = formattedData;
 
-    // Percorrer as partes e separar números de strings
+    //Criando um ForEach para percorrer os componentes da array (ou string)
     dataParts.forEach((part) => {
-      // Tentar converter a parte em número
-      if (!isNaN(part) && part !== "") {
-        numbers.push(Number(part));
-      } else {
-        strings.push(part);
-      }
+      // Aqui é feita uma verificação lógica: isNaN é uma função do javascript para verificar se determinado dado não é número. No caso, usando "!" na frente invertemos essa lógica e selecionamos apenas os número
+      // (eu amo usar operador ternário)
+      !isNaN(part)
+        ? //a função push insere o elemento na sua devida array
+          numbers.push(part)
+        : strings.push(part)
     });
 
     return { numbers, strings };
@@ -54,14 +54,6 @@ function App() {
         />
         <button type="submit">Enviar</button>
       </Form>
-      <>
-        <h3>Números:</h3>
-        <span>{formattedData.numbers.join(", ")}</span>
-      </>
-      <>
-        <h3>Palavras:</h3>
-        <span>{formattedData.strings.join(", ")}</span>
-      </>
     </Container>
   );
 }
