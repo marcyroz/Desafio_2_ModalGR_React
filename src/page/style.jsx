@@ -20,6 +20,11 @@ export const Container = styled.div`
     font-size: 20px;
   }
 
+  h3 {
+    color: #00172b;
+    font-size: 20px;
+  }
+
 `;
 
 export const Form = styled.form`
@@ -42,4 +47,5 @@ export const Form = styled.form`
     border-radius: 4px;
     border-style: none;
   }
+
 `;

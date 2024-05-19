@@ -26,18 +26,18 @@ function App() {
       // Aqui é feita uma verificação lógica: isNaN é uma função do javascript para verificar se determinado dado não é número. No caso, usando "!" na frente invertemos essa lógica e selecionamos apenas os número
       // (eu amo usar operador ternário)
       !isNaN(part)
-        ? //a função push insere o elemento na sua devida array
+        ? //a função push insere o elemento na sua devida array, dessa forma como essas arrays fazem parte de um estado, vão se acumulando no campo abaixo do formulário
           numbers.push(part)
         : strings.push(part);
     });
 
     return { numbers, strings };
   };
-  //função que irá tratar o evento de submit do form (reciclando explicações :p)
   const handleSubmit = (event) => {
     event.preventDefault();
 
     setFormattedData(formatData(data));
+    //zera o input
     setData('');
   };
 
@@ -55,11 +55,10 @@ function App() {
         />
         <button type="submit">Enviar</button>
       </Form>
+      {/* fragmento */}
       <>
         <h3>Números:</h3>
         <span>{formattedData.numbers.join(", ")}</span>
-      </>
-      <>
         <h3>Palavras:</h3>
         <span>{formattedData.strings.join(", ")}</span>
       </>
