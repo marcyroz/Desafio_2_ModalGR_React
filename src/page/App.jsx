@@ -23,7 +23,7 @@ function App() {
 
     //Criando um ForEach para percorrer os componentes da array (ou string)
     dataParts.forEach((part) => {
-      // Aqui é feita uma verificação lógica: isNaN é uma função do javascript para verificar se determinado dado não é número. No caso, usando "!" na frente invertemos essa lógica e selecionamos apenas os número
+      // Aqui é feita uma verificação lógica: isNaN é uma função do javascript para verificar se determinado dado não é número (descobri fazendo esse projeto...). No caso, usando "!" na frente invertemos essa lógica e selecionamos apenas os número
       // (eu amo usar operador ternário)
       !isNaN(part)
         ? //a função push insere o elemento na sua devida array, dessa forma como essas arrays fazem parte de um estado, vão se acumulando no campo abaixo do formulário
@@ -58,6 +58,7 @@ function App() {
       {/* fragmento */}
       <>
         <h3>Números:</h3>
+        {/* juntando os elementos dos arrays com uma vírgula */}
         <span>{formattedData.numbers.join(", ")}</span>
         <h3>Palavras:</h3>
         <span>{formattedData.strings.join(", ")}</span>
