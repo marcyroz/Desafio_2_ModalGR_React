@@ -45,7 +45,7 @@ function App() {
     <Container>
       <img src={logo} width={160}></img>
       <h1>Bem vindo!</h1>
-      <span>Insira os dados e faremos uma classificação</span>
+      <span>Insira os dados e faremos uma classificação</span><br/>
       <span>Instruções: insira os números e nomes com vírgulas separando</span>
       <Form onSubmit={handleSubmit}>
         <input
