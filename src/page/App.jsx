@@ -28,16 +28,17 @@ function App() {
       !isNaN(part)
         ? //a função push insere o elemento na sua devida array
           numbers.push(part)
-        : strings.push(part)
+        : strings.push(part);
     });
 
     return { numbers, strings };
   };
-
+  //função que irá tratar o evento de submit do form (reciclando explicações :p)
   const handleSubmit = (event) => {
     event.preventDefault();
 
     setFormattedData(formatData(data));
+    setData('');
   };
 
   return (
@@ -54,6 +55,14 @@ function App() {
         />
         <button type="submit">Enviar</button>
       </Form>
+      <>
+        <h3>Números:</h3>
+        <span>{formattedData.numbers.join(", ")}</span>
+      </>
+      <>
+        <h3>Palavras:</h3>
+        <span>{formattedData.strings.join(", ")}</span>
+      </>
     </Container>
   );
 }

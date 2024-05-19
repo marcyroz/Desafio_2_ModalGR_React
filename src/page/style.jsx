@@ -6,7 +6,7 @@ export const Container = styled.div`
   border-radius: 4px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  margin: 100px auto;
+  margin: 10px auto;
   background-color: #b3cde4;
   font-family: "Plus Jakarta Sans";
 
