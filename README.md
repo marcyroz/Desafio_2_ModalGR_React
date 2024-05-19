@@ -16,6 +16,6 @@ Mais um que eu quebrei minha cabeçinha, nunca trabalhei tanto em tão pouco tem
 Nesse fui em uma pegada mais simples mas ainda sim tentando manter um padrão entre os projetos (Eu amo React....)
 <br/>
 <br/>
-desafio-2-modal-gr-react.vercel.app
+https://desafio-2-modal-gr-react.vercel.app/
 <br/>
 Não consegui me segurar e fiz o deploy desse também... Até mais!
